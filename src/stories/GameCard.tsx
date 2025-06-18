@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
 import React from "react";
-import { Card, Image, Typography } from "antd";
-import './gamecard.css';
+import { Image, Typography } from "antd";
+import "./gamecard.css";
 
-const { Title, Paragraph } = Typography;
+const { Paragraph } = Typography;
 
 interface GameCardProps {
   imageUrl: string;
@@ -13,23 +13,26 @@ interface GameCardProps {
   content: string;
 }
 
-const GameCard: React.FC<GameCardProps> = ({ imageUrl, tag, title, content }) => {
+const GameCard: React.FC<GameCardProps> = ({
+  imageUrl,
+  tag,
+  title,
+  content,
+}) => {
   return (
-    <Card className="game-card" bodyStyle={{ padding: 15 }}>
-  <Image
-    alt={title}
-    preview={false}
-    src={imageUrl}
-    className="game-card-image"
-  />
-  <Card className="game-card-tag">
-    {tag}
-  </Card>
-  <Title level={5} className="game-card-title">
-    {title}
-  </Title>
-  <Paragraph className="game-card-content">{content}</Paragraph>
-</Card>
+    <div className="game-card">
+      <div className="image-container">
+        <Image
+          alt={title}
+          preview={false}
+          src={imageUrl}
+          className="cardimage"
+        />
+      </div>
+      <Paragraph className="game-card-tag">{tag}</Paragraph>
+      <Paragraph className="game-card-title">{title}</Paragraph>
+      <Paragraph className="game-card-content">{content}</Paragraph>
+    </div>
   );
 };
 

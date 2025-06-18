@@ -5,17 +5,11 @@
   background-image: linear-gradient(180deg, #026 0.5%, #04c 99%);
   border-radius: 15px;
   border: none;
-  padding: 0 !important;
+  padding:15px;
 }
 
 .game-card-inner {
   padding: 15px;
-}
-
-.game-card-image {
-  height: 600px !important;
-  border-radius: 15px;
-  margin-bottom: 8px;
 }
 
 .game-card-tag {
@@ -32,12 +26,34 @@
   border: 1px solid white;
 }
 
+.image-container {
+  width: 100%;
+  height: 510px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.cardimage {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .cardimage {
+  transform: scale(1.10); /* zoom in 5% */
+}
+
 .game-card-title {
   color: white !important;
-  margin-bottom: 8px;
-  font-weight: bold;
+  font-size: 19px;
+  margin-bottom: 0% !important;
+  margin-bottom: 15px !important;
+  font-weight: 900;
 }
 
 .game-card-content {
   color: white;
+  font-weight: 600;
 }

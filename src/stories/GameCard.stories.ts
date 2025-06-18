@@ -58,6 +58,7 @@ const meta: Meta<typeof GameCard> = {
   },
 };
 
+
 export default meta;
 type Story = StoryObj<typeof GameCard>;
 

@@ -1,0 +1,75 @@
+.gameinfo-card {
+  width: 642px;
+  height: 780px;
+  border-radius: 0px;
+  background-color: rgb(26 26 26 / var(--tw-bg-opacity, 1));
+  border-color: rgb(255, 247, 204);
+  border-width: 5px;
+  border-style: solid;
+  box-shadow: rgb(255, 255, 0) 0px 0px 12px 0px inset,
+    rgba(248, 235, 18, 0.44) 0px 0px 12px 0px;
+}
+
+.gameinfo-card-image {
+  width: 100%;
+  height: 361px !important;
+}
+
+.gameinfo-card-title {
+  color: white !important;
+  font-size: 24px;
+  margin-bottom: 0px !important;
+  font-weight: bold;
+}
+
+.gameinfo-card-content {
+  color: white;
+  font-weight: 600;
+}
+
+.gameinfo-container {
+  padding-bottom: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 10px;
+}
+
+.gameinfo-container.red {
+  background-color: red;
+}
+
+.gameinfo-container.green {
+  background-color: green;
+}
+
+.gameinfo-container.blue {
+  background-color: blue;
+}
+
+.gameinfo-divfordate {
+  height: 270px;
+}
+
+.gameinfo-card-date {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.gameinfo-card-preorder-button a {
+  background-image: url("https://t4.ftcdn.net/jpg/14/00/43/71/360_F_1400437194_xPgKpT8pj4fcJ77BT6QJlDO9D4wsb3WE.jpg");
+  background-size: 800px;
+  background-position: 1485px;
+  border-width: 5px;
+  border-color: #ffee51;
+  border-style: solid;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  height: 58px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  transform: skewX(-15deg);
+}

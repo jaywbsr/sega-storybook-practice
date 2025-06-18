@@ -4,74 +4,236 @@
   align-items: center;
   background-color: #0d1126;
   padding: 0 20px;
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   height: 48px;
 }
 
-.storybook-nav ul {
+/* Logo spacing */
+.image {
+  margin-left: 50px;
+}
+
+/* Nav styles */
+.storybook-nav .ant-menu {
+  background-color: #0d1126;
   list-style: none;
   display: flex;
+  overflow-x: auto;
   margin: 0;
-  padding: 0;
+  padding-left: 15%;
+  padding-right: 20%;
   height: 48px;
   align-items: center;
 }
 
-.storybook-nav li {
+/* .storybook-nav li{
   height: 100%;
-}
+} */
 
-.storybook-nav a {
-  color: white;
+.storybook-nav .ant-menu-item a {
+  color: white !important;
   font-weight: bold;
   font-size: 16px;
-  transition: background-color 0s, transform 0s;
+  transition: background-color 0.3s, transform 0.3s;
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 0 20px;
   transform: none;
-  text-decoration: none;
 }
 
-.storybook-nav a:hover {
+.storybook-nav .ant-menu-item a:hover {
   background-color: #002366;
   transform: skewX(-15deg);
 }
 
-.storybook-nav a span {
+.storybook-nav .ant-menu-item a span {
   display: inline-block;
   transform: none;
-  transition: transform 0s;
+  transition: transform 0.3s;
 }
 
-.storybook-nav a:hover span {
+.storybook-nav .ant-menu-item a:hover span {
   transform: skewX(15deg);
+  color: white;
 }
 
+/* Email signup button */
 .email-signup {
-  margin-right: 50;
+  margin-right: 50px;
 }
 
 .email-signup a {
   color: white;
   background-color: #0057ff;
-  border-radius: none;
   font-weight: bold;
   text-decoration: none;
-  transition: backgro und-color 0.3s;
   display: flex;
   height: 48px;
   width: 198px;
   align-items: center;
   justify-content: center;
   transform: skewX(-15deg);
+  transition: background-color 0.3s;
 }
 
 .email-signup a:hover {
   background-color: #384ca4;
 }
 
-.image{
-  margin-left: 50;
+/* 🔽 Responsive adjustments */
+
+.menu-icon {
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.storybook-nav {
+  overflow: visible;
+  flex: 1;
+}
+
+/* Style the submenu (dropdown under GAME) */
+.storybook-nav-menu .ant-menu-submenu-popup {
+  background-color: #0d1126; /* dark background */
+  border: none;
+  padding: 0;
+}
+
+.storybook-nav-menu .ant-menu-sub {
+  background-color: #0d1126;
+}
+
+.storybook-nav-menu .ant-menu-submenu-title {
+  color: white !important;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.storybook-nav-menu .ant-menu-submenu-title:hover {
+  background-color: #002366;
+  transform: skewX(-15deg);
+}
+
+.storybook-nav-menu .ant-menu-item {
+  background-color: #0d1126 !important;
+  color: white;
+  font-weight: bold;
+}
+
+.storybook-nav-menu .ant-menu-item:hover {
+  background-color: #384ca4;
+  color: white;
+}
+
+/*When screen minimize it will show only logo and menu icon*/
+/* Hide nav + signup on small screens */
+@media (max-width: 1299px) {
+  .storybook-nav,
+  .email-signup {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 48px;
+    right: 0; /* align dropdown to right side */
+    width: 75vw;
+  }
+
+  .dropdown ul {
+    background-color: #002366 !important;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Submenu item (like GAME) */
+  .mobile-nav-menu .ant-menu-submenu-title {
+    background-color: #002366;
+    color: white !important;
+    padding: 0px 55px;
+    font-weight: bold;
+  }
+
+  .mobile-nav-menu .ant-menu-item:hover,
+  .mobile-nav-menu .ant-menu-submenu-title:hover {
+    background-color: transparent !important;
+    /* color: inherit !important; */
+  }
+
+  /* Remove background and text color on selected (clicked) */
+  .mobile-nav-menu .ant-menu-item-selected,
+  .mobile-nav-menu .ant-menu-item-active,
+  .mobile-nav-menu .ant-menu-item:active,
+  .mobile-nav-menu .ant-menu-submenu-selected,
+  .mobile-nav-menu .ant-menu-submenu-active {
+    background-color: transparent !important;
+    color: inherit !important;
+  }
+
+  .dropdown a {
+    display: block;
+    padding: 0px 40px;
+    background-color: #002366;
+    color: white !important;
+    font-weight: bold;
+    align-items: center;
+  }
+}
+
+/* Show nav + signup on large screens */
+@media (min-width: 1300px) {
+  .menu-icon {
+    display: none;
+  }
+}
+
+.header {
+  background-color: #0d1126;
+  color: white;
+  width: 100%;
+  position: relative;
+  z-index: 50;
+}
+
+@media (max-width: 1299px) {
+  .storybook-nav,
+  .email-signup {
+    display: none;
+  }
+}
+
+/* Mobile email signup (inherits same design as desktop) */
+.dropdown-email-signup {
+  padding: 16px 20px;
+  background-color: #002366;
+  display: flex;
+  justify-content: center;
+}
+
+.email-signup-button {
+  background-color: #0057ff !important;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  height: 48px;
+  width: 100%;
+  transform: skewX(-15deg);
+  transition: background-color 0.3s;
+  text-align: center;
+  align-content: center;
+}
+
+.email-signup-button:hover {
+  background-color: #384ca4;
 }

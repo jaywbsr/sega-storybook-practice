@@ -1,0 +1,7 @@
+.storybook-gamebutton{
+    background-color: blueviolet;
+}
+
+.storybook-gamebutton :hover{
+    background-color: blue;
+}
